@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>localization test</title>
+
+  <!-- <link rel="stylesheet" href="angular.min.js" type="text/css"> -->
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-gettext/2.2.1/angular-gettext.min.js"></script>
+</head>
+<body>
+  <div>
+    <div>
+      <h1 translate>My test string</h1>
+      <h2 translate>another text</h2>
+      <h2 translate>Another Text</h2>
+    </div>
+    <div translate>
+      My test long text string. My test long text string. My test long text string. My test long text string.
+      My test long text string. My test long text string. My test long text string. My test long text string.
+      My test long text string. My test long text string.
+    </div>
+    <br />
+    <div translate>
+      My test string along with some <a href="www.google.com">tag</a>.
+    </div>
+  </div>
+  <script src="localization.js"></script>
+</body>
+</html>
