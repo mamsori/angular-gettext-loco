@@ -87,7 +87,7 @@ gulp.task('translate_in', function() {
 			[
 				PATHS.localization +'loco/import.js',
 				'9eb87f16b36c24b37d2b767e8ce29a1a',
-				PATHS.dist + '/po/',
+				PATHS.localization + 'po/',
 				locale
 			], {cwd: process.cwd()});
 
