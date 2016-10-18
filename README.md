@@ -1,5 +1,5 @@
 # angular-gettext-loco
-angular-gettext + loco tool
+angular-gettext + loco web localization tool
 
 ```
 npm install
