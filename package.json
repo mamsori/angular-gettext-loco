@@ -4,7 +4,8 @@
   "description": "localization Build",
   "keywords": [],
   "scripts": {
-    "build": "./node_modules/.bin/gulp build"
+    "build": "./node_modules/.bin/gulp translate_in translate_out",
+    "start": "./node_modules/.bin/gulp"
   },
   "dependencies": {},
   "devDependencies": {
