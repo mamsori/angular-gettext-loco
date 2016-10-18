@@ -82,9 +82,8 @@ gulp.task('translate_in', function() {
 				loco.import('9eb87f16b36c24b37d2b767e8ce29a1a', locale_filename, {index: 'text'}),
 				loco.import('ff25e896b523b33e28c2115ea398f6af', locale_filename, {index: 'name'})  // for server side error code
 			]).then(function(d) {
-				var str = '{"' + locale + '": ' + d[0].slice(0, -2) + ', ' + d[1].substr(1) + '}';
-				// var data = {};
-				// data[locale] = merge(d[0], d[1]);
+				console.log();
+				var str = '{"' + locale + '": ' + d[0].replace(/\\r/g, "").slice(0, -2) + ', ' + d[1].substr(1) + '}';
 				fs.writeFileSync(PATHS.dist + locale_filename, str);
 			});
 
