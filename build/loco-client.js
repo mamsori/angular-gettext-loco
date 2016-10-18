@@ -31,8 +31,7 @@ module.exports = {
                 deferred.reject(error);
                 return;
             }
-            var d = JSON.parse(body);
-            deferred.resolve(d);
+            deferred.resolve(body);
             // fs.writeFileSync(path + fileName, body);
         });
 

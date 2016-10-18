@@ -15,8 +15,7 @@ var PATHS = {
 };
 
 gulp.task('translate_backup', function() {
-	return gulp.src(PATHS.build + 'template.pot')
-		.pipe(gulp.dest(PATHS.build + 'template_backup.pot'));
+	fs.renameSync(PATHS.build + 'template.pot', PATHS.build + 'template_backup.pot');
 });
 
 var crypto = require('crypto');
@@ -83,7 +82,6 @@ gulp.task('translate_in', function() {
 				loco.import('9eb87f16b36c24b37d2b767e8ce29a1a', locale_filename, {index: 'text'}),
 				loco.import('ff25e896b523b33e28c2115ea398f6af', locale_filename, {index: 'name'})  // for server side error code
 			]).then(function(d) {
-				// console.log(d[0], d[1]);
 				var str = '{"' + locale + '": ' + d[0].slice(0, -2) + ', ' + d[1].substr(1) + '}';
 				// var data = {};
 				// data[locale] = merge(d[0], d[1]);
